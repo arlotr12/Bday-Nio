@@ -1,0 +1,6 @@
+{
+  "name": "The Missing Pieces",
+  "description": "An atmospheric hidden-object mystery where 26 scattered fragments await discovery in the dark.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
