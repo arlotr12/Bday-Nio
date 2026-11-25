@@ -4,10 +4,12 @@ import { EnvelopeModal } from './components/EnvelopeModal';
 import { PuzzleStage } from './components/PuzzleStage';
 import { DEFAULT_PUZZLE_CONFIG } from './puzzleConfig';
 import { generate26JigsawPieces } from './utils/jigsaw';
+import { Route, Routes } from 'react-router-dom';
+import Photobooth from './pages/photobooth'
 
 type GameStage = 'intro' | 'dark-room' | 'puzzle';
 
-export default function App() {
+function BirthdayGame() {
   const [stage, setStage] = useState<GameStage>('intro');
   const [foundIds, setFoundIds] = useState<number[]>([]);
   const [lockedIds, setLockedIds] = useState<number[]>([]);
@@ -102,5 +104,14 @@ export default function App() {
         />
       )}
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<BirthdayGame />} />
+      <Route path="/photobooth" element={<Photobooth />} />
+    </Routes>
   );
 }

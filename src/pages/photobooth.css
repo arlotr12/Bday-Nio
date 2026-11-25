@@ -1,0 +1,159 @@
+
+.photobooth-page {
+  min-height: 100vh;
+  padding: 35px 20px;
+  background: #e0e9d9;
+  color: #344a39;
+  font-family: inherit;
+}
+
+.photobooth-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.photobooth-header p {
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.photobooth-header h1 {
+  font-size: clamp(25px, 5vw, 38px);
+  margin: 10px 0;
+}
+
+.photobooth-header span {
+  font-size: 14px;
+}
+
+.photobooth-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 280px) minmax(260px, 340px);
+  justify-content: center;
+  align-items: start;
+  gap: 35px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.photobooth-preview {
+  width: 100%;
+  background: #57140e;
+  box-shadow: 0 10px 30px #0002;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.photobooth-preview canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.photobooth-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.photo-control {
+  background: #f7f4eb;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.photo-control h2 {
+  font-size: 16px;
+  margin: 0 0 14px;
+}
+
+.photo-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.photo-tab {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #b6c3ae;
+  border-radius: 8px;
+  background: #fff;
+  color: #344a39;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.photo-tab.active {
+  background: #8c3027;
+  color: white;
+  border-color: #8c3027;
+}
+
+.upload-button {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  background: #8c3027;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.upload-button input {
+  display: none;
+}
+
+.photo-control label:not(.upload-button) {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.photo-control input[type="range"] {
+  width: 100%;
+  accent-color: #8c3027;
+}
+
+.download-button {
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  background: #8c3027;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.download-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.photobooth-note {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.7;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .photobooth-page {
+    padding: 25px 14px;
+  }
+
+  .photobooth-layout {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 340px;
+    gap: 20px;
+  }
+
+  .photobooth-preview {
+    max-width: 280px;
+    margin: auto;
+  }
+}
